@@ -1,0 +1,14 @@
+/.idea
+*.pyc
+*.bak
+*.info
+*.ini
+*__pycache__*
+.idea/*
+*.log
+.gradle
+.DS_Store
+.idea
+gradlew*
+build
+gradle
