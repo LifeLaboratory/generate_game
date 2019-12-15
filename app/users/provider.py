@@ -5,7 +5,7 @@ class Provider(bp.Provider):
     def __init__(self):
         super().__init__()
         self.table_name = 'user'
-        self.field = ['login, password, name']
+        self.field = ['login, password, name', 'email']
 
     def create(self, data):
         self.query = f'''
@@ -37,7 +37,10 @@ class Provider(bp.Provider):
 
     def users(self, where=None):
         self.query = f'''
-  select *
+  select 
+    id_user
+    , login
+    , name
   from "{self.table_name}"
   {where}
         '''
